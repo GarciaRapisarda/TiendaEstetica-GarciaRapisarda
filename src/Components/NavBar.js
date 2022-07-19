@@ -14,8 +14,8 @@ const NavBar = () => {
     <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div className="navbar-nav ">
         <a className="nav-link text-white" aria-current="page" href="#">Home</a>
-        <a className="nav-link text-white" href="#">Servicios</a>
         <a className="nav-link text-white" href="#">Productos</a>
+        <a className="nav-link text-white" href="#">Categorias</a>
         <a className="nav-link text-white" href="#">Contacto</a>
         </div>
     </div>

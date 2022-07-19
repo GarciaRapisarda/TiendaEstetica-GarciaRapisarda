@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './Components/ItemDetailContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-    <Route path="/" element={<App />} />
+    <Route path="/" element={<App />}>
+    <Route path='ItemDetailContainer' element={<ItemDetailContainer />} />
+    <Route path='categorias/:id' element={<ItemDetailContainer />} />
+    </Route>
     </Routes>
   </BrowserRouter>
 );

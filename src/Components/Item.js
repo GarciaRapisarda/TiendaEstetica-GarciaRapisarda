@@ -12,7 +12,7 @@ const Item = ({ id, title, category, description, price, image }) => {
                     <div className="card" style={{ "width": "18rem" }}>
                         <img src={image} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <Link to={`/item/${id}`}>
+                            <Link to={`/categorias/${id}`}>
                             <h5 className="card-title text-dark">{category}</h5>
                             </ Link>
                             <h5 className="card-title text-dark">{title}</h5>
