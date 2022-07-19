@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import products from '../products.json';
+import { Outlet, Link } from 'react-router-dom';
+
 
 const ItemListContainer = ({ greeting }) => {
   function onAddCallBack(n) {
@@ -26,7 +28,7 @@ const ItemListContainer = ({ greeting }) => {
       }
     }, 2000);
   });
-  
+
   useEffect(() => {
     getData
       .then((data) => {
@@ -42,6 +44,7 @@ const ItemListContainer = ({ greeting }) => {
       {greeting}
       <ItemCount stock={5} initial={1} onAdd={onAddCallBack} />
       <ItemList items={lista} />
+      
     </div>
 
   );

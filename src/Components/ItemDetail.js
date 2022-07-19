@@ -1,0 +1,26 @@
+import React from "react";
+
+
+const ItemDetail = ({item}) => {
+
+  return (
+    <div>
+      <div className="container">
+        <div className="row">
+          <div className="card" style={{ "width": "18rem" }}>
+            <img src={item.image} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title text-dark">{item.title}</h5>
+              <p className="card-text text-dark">{item.description}</p>
+              <a href="#" className="btn btn-primary">${item.price}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  );
+};
+
+
+export default ItemDetail;
