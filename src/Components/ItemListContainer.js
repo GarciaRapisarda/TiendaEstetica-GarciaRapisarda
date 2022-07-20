@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
-import products from '../products.json';
-import { Outlet, Link } from 'react-router-dom';
+import products from '../MockApi/products.json';
+
 
 
 const ItemListContainer = ({ greeting }) => {

@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 
 
+
 const Item = ({ id, title, category, description, price, image }) => {
+    
     return (
         <div>
             <div className="container">
