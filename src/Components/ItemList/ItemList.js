@@ -1,5 +1,7 @@
 import React from 'react';
-import Item from './Item';
+import Item from '../Item';
+import ItemDetailContainer from '../ItemDetailContainer';
+import "./style.css";
 
 const ItemList = ({items}) => {  
   return (
@@ -11,8 +13,10 @@ const ItemList = ({items}) => {
     title={title}
     description={description}
     price={price}
-    image={image} /> 
+    image={image}
+    id={id} /> 
     ))} 
+    <ItemDetailContainer />
 
     </div>
   );

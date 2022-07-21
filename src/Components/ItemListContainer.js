@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
-import ItemList from './ItemList';
+import ItemList from './ItemList/ItemList';
 import products from '../MockApi/products.json';
 
 
