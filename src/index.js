@@ -2,27 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Home from './Components/Home';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ItemDetailContainer from './Components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer';
-import ItemList from './Components/ItemList/ItemList';
+import Contacto from './Components/Contacto';
+import ItemDetailContainer from './Components/ItemDetailContainer';
+import Categorias from './Components/Categorias';
+import Detail from './Components/Detail';
+
+
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-
-    <Routes>
-    <Route path="/" element={<App />}>
-    <Route index element={<Home />} /> 
-    <Route path="categorias/:id" element={<ItemList />} />
-    <Route path='item/:id' element={<ItemDetailContainer />} />
-    <Route path='category/:id' element={<ItemListContainer />} />
-    </Route>
-    </Routes>
+      <Routes> 
+        <Route path="/" element={<App/>}>
+        <Route index element={<ItemListContainer/>} />
+        <Route path="Categorias/:id" element={<ItemListContainer/>} />
+        <Route path="Item/:id" element={<ItemDetailContainer/>} />
+        <Route path="Contacto" element={<Contacto />} />
+        <Route path="Categorias" element={<Categorias />}/>
+        <Route path="Detail" element={<Detail />}/>
+          
+      
+        </Route>  
+      </Routes>
   </BrowserRouter>
 );
 

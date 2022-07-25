@@ -5,7 +5,7 @@ import "./style.css";
 
 const ItemList = ({items}) => {  
   return (
-    <div>{
+    <div className='item-list-container'>{
        items.map(({ id, category, title, description, price, image }) => (
     <Item 
     key={id}

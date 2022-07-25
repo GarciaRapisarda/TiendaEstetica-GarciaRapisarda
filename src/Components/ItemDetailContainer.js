@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from './ItemDetail';
-import getData from '../MockApi';
+import getData from '../MockApi/index';
 
 
 const ItemDetailContainer = () => {
     const [detail, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
-    console.log(detail);
+  
     useEffect(() => { 
         getData
         .then(data => {
@@ -22,7 +22,9 @@ const ItemDetailContainer = () => {
       
     return (
         <div>
-            {loading ? <div>Loading...</div> : <ItemDetail item={detail} />}    
+            {loading ? <div className="spinner-grow text-danger" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div> : <ItemDetail item={detail} />}    
         </div>
     )
 };

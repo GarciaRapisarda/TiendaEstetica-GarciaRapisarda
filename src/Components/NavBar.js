@@ -1,5 +1,5 @@
 import CartWidget from "./CartWidget";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 
@@ -7,10 +7,11 @@ import { useParams } from "react-router-dom";
 
 const NavBar = () => {
       return ( 
+      
         <nav className="navbar navbar-expand-lg bg-dark">
   <div className="container-fluid">
     <Link to="/">
-      <a className="navbar-brand text-white">Estética Viáfara</a>
+      <div className="navbar-brand text-white">Estética Viáfara</div>
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -22,13 +23,18 @@ const NavBar = () => {
         <Link to="/categorias">
         <a className="nav-link text-white" href="#">Categorias</a>
         </Link>
-        <a className="nav-link text-white" href="#">Contacto</a>
+        <Link to="Contacto">
+        <div className="nav-link text-white">Contacto</div>
+        </Link>
         </div>
     </div>
     <CartWidget/>
   </div>
 
 </nav>
+
+
+
 
       
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList/ItemList';
-import products from '../MockApi/products.json';
+import products from '../MockApi/products.js';
 
 
 
@@ -17,6 +17,7 @@ const ItemListContainer = ({ greeting }) => {
   }
 
   const [lista, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const getData = new Promise((resolve, reject) => {
     let afterPromises = true;
     // let afterPromises = false;
@@ -37,13 +38,17 @@ const ItemListContainer = ({ greeting }) => {
       .catch((err) => {
         console.log(err);
       })
+      .finally(() => { setLoading(false) }) 
+      
   }, []);
 
   return (
     <div className='bg-dark text-white'>
       {greeting}
       <ItemCount stock={5} initial={1} onAdd={onAddCallBack} />
-      <ItemList items={lista} />
+      {loading ? <div className="spinner-grow text-danger" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div> : <ItemList items={lista} />}
       
     </div>
 

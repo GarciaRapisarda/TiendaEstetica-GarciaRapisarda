@@ -17,4 +17,5 @@ const getData = new Promise((resolve, reject) => {
     }, 2000);   
 });
 
+
 export default getData;

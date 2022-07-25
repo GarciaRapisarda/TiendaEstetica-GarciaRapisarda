@@ -1,4 +1,4 @@
-[
+const products = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -240,3 +240,11 @@
         }
     }
 ]
+
+const getData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(products)
+    }, 2000);   
+});
+
+export default getData;
