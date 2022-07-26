@@ -9,28 +9,27 @@ const Categorias = () => {
       
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products/' + params.category)
+    fetch('https://fakestoreapi.com/products/categories')
     .then(res=>res.json())
     .then(json=> {
       setResultado(json)
       console.log(json)
     })
      .finally(() => { setLoading(false) })
-    }, [params.category]);
+    }, []);
+
+    
     
   return (
-    <div>{categoria && ( <div className='d-flex justify-content-center pt-5'>
-    <div className="card" style={{ "width": "18rem" }}>
-    <img src={categoria.image} alt={categoria.name} />
-    <div className="card-body">
-    <h5 className="card-title text-dark">{categoria.category}</h5>
-    <h5 className="card-title text-dark">{categoria.title}</h5>
-    <p className="card-text text-dark">{categoria.description}</p>
-    <div className="btn btn-primary">${categoria.price}</div>
-  </div>
-  </div>
-  </div>)}
+    <div>
+        <ul className="list-group">
+            <li>{categoria.map((seccion) => {
+                return <li className="list-group-item">
+                    {seccion}
+                </li>
+            }
 
+            )}</li></ul>
     </div>
   )
 }

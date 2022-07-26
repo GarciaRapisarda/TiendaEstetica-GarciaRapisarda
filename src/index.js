@@ -25,9 +25,9 @@ root.render(
         
         <Route path="ItemDetailContainer" element={<ItemDetailContainer/>} />
         <Route path="Contacto" element={<Contacto />} />
-        <Route path="Categorias" element={<Categorias />}>
-          <Route path="Categorias/:Category" element={<Categorias/>} />
-        </Route> 
+        <Route path="Categorias" element={<Categorias />} />
+        <Route path="Categorias/:id" element={<ItemListContainer/>} />
+         
         <Route path="Item/:id" element={<Detail/>} />
         
           

@@ -20,7 +20,11 @@ const Detail = () => {
      .finally(() => { setLoading(false) })
     }, [params.id]);
     
-     
+  if (loading) {
+    return <div className="spinner-grow text-danger" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+  }   
 
   return (
     <div>
