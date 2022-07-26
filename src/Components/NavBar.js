@@ -1,6 +1,6 @@
 import CartWidget from "./CartWidget";
-import { Link, Outlet } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -18,10 +18,11 @@ const NavBar = () => {
     </button>
     <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div className="navbar-nav ">
-        <a className="nav-link text-white" aria-current="page" href="#">Home</a>
-        <a className="nav-link text-white" href="#">Productos</a>
+        <Link to="/">
+        <div className="nav-link text-white" aria-current="page">Home</div></Link>
+        <div className="nav-link text-white" >Productos</div>
         <Link to="/categorias">
-        <a className="nav-link text-white" href="#">Categorias</a>
+        <div className="nav-link text-white" >Categorias</div>
         </Link>
         <Link to="Contacto">
         <div className="nav-link text-white">Contacto</div>

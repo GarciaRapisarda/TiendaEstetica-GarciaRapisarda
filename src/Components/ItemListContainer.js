@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList/ItemList';
-import products from '../MockApi/products.js';
+
 
 
 
@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const [lista, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const getData = new Promise((resolve, reject) => {
+  /* const getData = new Promise((resolve, reject) => {
     let afterPromises = true;
     // let afterPromises = false;
     setTimeout(() => {
@@ -28,19 +28,17 @@ const ItemListContainer = ({ greeting }) => {
         reject("Failed to get data");
       }
     }, 2000);
-  });
-
+  }); */
   useEffect(() => {
-    getData
-      .then((data) => {
-        setProducts(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => { setLoading(false) }) 
-      
+  fetch('https://fakestoreapi.com/products')
+  .then(res=>res.json())
+  .then(json=> {
+    setProducts(json)
+  })
+   .finally(() => { setLoading(false) })
   }, []);
+  
+  
 
   return (
     <div className='bg-dark text-white'>

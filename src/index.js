@@ -8,7 +8,8 @@ import ItemListContainer from './Components/ItemListContainer';
 import Contacto from './Components/Contacto';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Categorias from './Components/Categorias';
-import Detail from './Components/Detail';
+import Detail  from './Components/Detail';
+
 
 
 
@@ -21,11 +22,14 @@ root.render(
       <Routes> 
         <Route path="/" element={<App/>}>
         <Route index element={<ItemListContainer/>} />
-        <Route path="Categorias/:id" element={<ItemListContainer/>} />
-        <Route path="Item/:id" element={<ItemDetailContainer/>} />
+        
+        <Route path="ItemDetailContainer" element={<ItemDetailContainer/>} />
         <Route path="Contacto" element={<Contacto />} />
-        <Route path="Categorias" element={<Categorias />}/>
-        <Route path="Detail" element={<Detail />}/>
+        <Route path="Categorias" element={<Categorias />}>
+          <Route path="Categorias/:Category" element={<Categorias/>} />
+        </Route> 
+        <Route path="Item/:id" element={<Detail/>} />
+        
           
       
         </Route>  

@@ -1,4 +1,4 @@
-const producto = [{
+const producto = {
     "id": 17,
     "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
     "price": 39.99,
@@ -9,7 +9,7 @@ const producto = [{
         "rate": 3.8,
         "count": 679
     }
-}];
+};
 
 const getData = new Promise((resolve, reject) => {
     setTimeout(() => {
