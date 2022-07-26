@@ -13,17 +13,22 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return (
         <div>
-            <h3>{count}</h3>
-            <button onClick={restar} type="button" className="btn btn-danger">( - )</button>
-            <button onClick={sumar} type="button" className="btn btn-success">( + )</button>
-            <button onClick={() => {
-                if (count <= stock) {
-                    onAdd(count);
-                } else {
-                    alert("No hay suficiente stock disponible!");
-                }
-            }
-            } type="button" className="btn btn-secondary btn-lg">Agregar al carrito</button>
+            <div className="card text-center" >
+                <div className="card-body">
+                    <h5 className="card-title">Cantidad {count}</h5>
+                    <p className="card-text"><button onClick={restar} type="button" className="btn btn-danger">( - )</button>
+                        <button onClick={sumar} type="button" className="btn btn-success">( + )</button>
+                    </p>
+                    <button onClick={() => {
+                        if (count <= stock) {
+                            onAdd(count);
+                        } else {
+                            alert("No hay suficiente stock disponible!");
+                        }
+                    }
+                    } type="button" className="btn btn-secondary btn-lg">Agregar al carrito</button>
+                </div>
+            </div>
         </div>
     );
 };

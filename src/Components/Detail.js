@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import ItemCount from './ItemCount'
 
 
 
 const Detail = () => {
+  function onAddCallBack(n) {
+    if (n === 0) {
+      alert("No hay productos para agregar");
+    } else if (n === 1) {
+      alert(`Seleccionaste ${n} producto`);
+    } else {
+      alert(`Seleccionaste ${n} productos`)
+    }
+  }
   let params = useParams()
 
   const [datos, setResultado] = useState([]);
@@ -27,8 +37,9 @@ const Detail = () => {
   }   
 
   return (
-    <div>
-      {datos && ( <div className='d-flex justify-content-center pt-5'>
+    <div><div className="d-inline-flex">
+      <ItemCount stock={5} initial={1} onAdd={onAddCallBack} /></div>
+      {datos && ( <div className='d-inline-flex justify-content-center pt-5'>
         <div className="card" style={{ "width": "18rem" }}>
         <img src={datos.image} alt={datos.name} />
         <div className="card-body">
