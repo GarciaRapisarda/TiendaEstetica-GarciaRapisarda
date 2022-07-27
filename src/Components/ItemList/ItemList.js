@@ -14,6 +14,7 @@ const ItemList = ({items}) => {
     description={description}
     price={price}
     image={image}
+    categoryId={category}
     id={id} /> 
     ))} 
     <ItemDetailContainer />

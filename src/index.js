@@ -25,13 +25,11 @@ root.render(
         
         <Route path="ItemDetailContainer" element={<ItemDetailContainer/>} />
         <Route path="Contacto" element={<Contacto />} />
-        <Route path="Categorias" element={<Categorias />} />
-        <Route path="Categorias/:id" element={<ItemListContainer/>} />
-         
         <Route path="Item/:id" element={<Detail/>} />
+        <Route path="Category/:categoryId" element={<Categorias />}/>
         
-          
-      
+         
+        
         </Route>  
       </Routes>
   </BrowserRouter>

@@ -15,6 +15,7 @@ const Detail = () => {
     }
   }
   let params = useParams()
+  console.log(params)
 
   const [datos, setResultado] = useState([]);
   const [loading, setLoading] = useState(true);
