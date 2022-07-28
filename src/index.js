@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer';
 import Contacto from './Components/Contacto';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Categorias from './Components/Categorias';
 import Detail  from './Components/Detail';
-
+import Cart from './Components/Cart';
 
 
 
@@ -26,7 +26,9 @@ root.render(
         <Route path="ItemDetailContainer" element={<ItemDetailContainer/>} />
         <Route path="Contacto" element={<Contacto />} />
         <Route path="Item/:id" element={<Detail/>} />
+        <Route path="Categorias" element={<Categorias/>} />
         <Route path="Category/:categoryId" element={<Categorias />}/>
+        <Route path="Cart" element={<Cart />}/>
         
          
         

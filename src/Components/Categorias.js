@@ -41,8 +41,11 @@ const Categorias = () => {
                     </div>
                 </div>
             ))}
-
+            
+          
         </div>
+        
+      
     )
 }
 

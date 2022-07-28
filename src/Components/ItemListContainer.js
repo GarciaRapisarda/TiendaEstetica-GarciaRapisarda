@@ -9,17 +9,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const [lista, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  /* const getData = new Promise((resolve, reject) => {
-    let afterPromises = true;
-    // let afterPromises = false;
-    setTimeout(() => {
-      if (afterPromises) {
-        resolve(products);
-      } else {
-        reject("Failed to get data");
-      }
-    }, 2000);
-  }); */
+  
   useEffect(() => {
   fetch('https://fakestoreapi.com/products')
   .then(res=>res.json())
