@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Item = ({ id, title, category, description, price, image, categoryId }) => {
+const Item = ({ id, title, rating, category, description, price, image, categoryId }) => {
 
 
     return (
@@ -21,6 +21,8 @@ const Item = ({ id, title, category, description, price, image, categoryId }) =>
                             <Link to={"Item/" + id}>
                             <h5 className="card-title">{title}</h5>
                             </Link>
+                            <p className="card-text d-inline-flex text-dark"><strong>Rating</strong></p>
+                            <button type="button" className="btn btn-warning">{rating.rate}</button>
                             <Link to={"Category/" + categoryId}>
                                 <p className="card-text">{category}</p>
                             </Link>

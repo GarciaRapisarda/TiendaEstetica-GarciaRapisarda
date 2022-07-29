@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount'
+import {CartContext} from './Context/CartContext'
 
 
 
@@ -16,6 +17,8 @@ const Detail = () => {
   }
   let params = useParams()
   console.log(params)
+
+const CartContextValue = useContext(CartContext)
 
   const [datos, setResultado] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,7 +45,9 @@ const Detail = () => {
       <ItemCount stock={5} initial={1} onAdd={onAddCallBack} /></div>
       {datos && ( <div className='d-inline-flex justify-content-center pt-5'>
         <div className="card" style={{ "width": "18rem" }}>
-        <img src={datos.image} alt={datos.name} />
+        <img className='img-thumbnail img-fluid' style={{}} src={datos.image} alt={datos.name} />
+        <p className="card-text text-dark"><strong>Rating</strong></p>
+        <button type="button" className="btn btn-warning">{datos.rating.rate}</button>
         <div className="card-body">
         <h5 className="card-title text-dark">{datos.category}</h5>
         <h5 className="card-title text-dark">{datos.title}</h5>
@@ -51,6 +56,9 @@ const Detail = () => {
       </div>
       </div>
       </div>)}
+      <div>
+        {CartContextValue}
+      </div>
     </div>
   )
 }

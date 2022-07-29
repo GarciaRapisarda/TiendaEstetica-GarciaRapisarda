@@ -28,6 +28,7 @@ root.render(
         <Route path="Item/:id" element={<Detail/>} />
         <Route path="Categorias" element={<Categorias/>} />
         <Route path="Category/:categoryId" element={<Categorias />}/>
+        
         <Route path="Item/:id/Cart" element={<Cart />}/>
         
          
