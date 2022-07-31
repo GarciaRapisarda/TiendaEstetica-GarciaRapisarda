@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
+    
     const [count, setCount] = useState(initial);
     const [cantidad, setCantidad] = useState();
     const [botonera, setBotonera] = useState(true);
@@ -49,6 +50,7 @@ console.log(cantidad);
                     }   
                 } type="button" className="btn btn-secondary btn-lg">Agregar al carrito</button>
                 </Link>
+                
                 </div>
             </div>)}
         </div>

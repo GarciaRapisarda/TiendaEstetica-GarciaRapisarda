@@ -1,5 +1,5 @@
 import NavBar from './Components/NavBar';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Outlet } from 'react-router-dom';
 import { CartContextProvider } from './Components/Context/CartContext';
 

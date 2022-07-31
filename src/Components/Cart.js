@@ -1,9 +1,10 @@
 import React from 'react'
 
 
-const Cart = () => {
+
+const Cart = ({children}) => {
   return (
-    <div>Cart
+    <div>{children}
         
     </div>
   )
