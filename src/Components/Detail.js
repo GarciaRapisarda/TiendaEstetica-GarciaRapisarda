@@ -20,7 +20,7 @@ const Detail = () => {
   let params = useParams()
   console.log(params)
 
-  const { cart, addToCart } = useContext(CartContext)
+  const { cart, addToCart, removeFromCart} = useContext(CartContext)
 
   console.log(addToCart)
 
@@ -59,6 +59,8 @@ const Detail = () => {
             <p className="card-text text-dark">{datos.description}</p>
             <div className="btn btn-primary">${datos.price}</div>
             <button onClick={() => addToCart(`${datos.title} ${datos.price} ${datos.description} ${datos.image} ${datos.category}`)} type="button" className="btn btn-success">Finalizar Compra</button>
+            <button onClick={() => removeFromCart (`${datos.id}`)} type="button" className="btn btn-danger">Eliminar Producto</button>
+            
           </div>
         </div>
       </div>)}
