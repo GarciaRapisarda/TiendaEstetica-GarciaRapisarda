@@ -241,10 +241,10 @@ const products = [
     }
 ]
 
-const getData = new Promise((resolve, reject) => {
+/* const getData = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(products)
     }, 2000);   
 });
-
-export default getData;
+ */
+export default products;

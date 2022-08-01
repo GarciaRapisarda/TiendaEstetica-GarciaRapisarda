@@ -41,4 +41,3 @@ const Item = ({ id, title, rating, category, description, price, image, category
 };
 
 export default Item;
-
