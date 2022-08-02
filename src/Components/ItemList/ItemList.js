@@ -6,16 +6,16 @@ import "./style.css";
 const ItemList = ({items}) => {  
   return (
     <div className='item-list-container'>{
-       items.map(({ id, category, rating, title, description, price, image }) => (
+       items.map(({ id, categoryId, title, description, price, imageId, rating }) => (
     <Item 
     key={id}
-    category={category} 
+   
     rating={rating}
     title={title}
     description={description}
     price={price}
-    image={image}
-    categoryId={category}
+    imageId={imageId}
+    categoryId={categoryId}
     id={id} /> 
     ))} 
     <ItemDetailContainer />
@@ -25,4 +25,3 @@ const ItemList = ({items}) => {
 };
 
 export default ItemList;
-

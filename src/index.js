@@ -10,7 +10,7 @@ import ItemDetailContainer from './Components/ItemDetailContainer';
 import Categorias from './Components/Categorias';
 import Detail  from './Components/Detail';
 import Cart from './Components/Cart';
-
+import './Components/firebase';
 
 
 

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-const Item = ({ id, title, rating, category, description, price, image, categoryId }) => {
+const Item = ({ id, categoryId, title, description, price, imageId, rating  }) => {
 
 
     return (
@@ -14,7 +14,7 @@ const Item = ({ id, title, rating, category, description, price, image, category
             <div className="card mb-3" style={{"maxWidth": "540px"}}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={image} className="img-fluid img-thumbnail rounded-start" alt={title}/>
+                        <img src={imageId} className="img-fluid img-thumbnail rounded-start" alt={title}/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -22,9 +22,9 @@ const Item = ({ id, title, rating, category, description, price, image, category
                             <h5 className="card-title">{title}</h5>
                             </Link>
                             <p className="card-text d-inline-flex text-dark"><strong>Rating</strong></p>
-                            <button type="button" className="btn btn-warning">{rating.rate}</button>
+                            <button type="button" className="btn btn-warning">{rating}</button>
                             <Link to={"Category/" + categoryId}>
-                                <p className="card-text">{category}</p>
+                                <p className="card-text">{categoryId}</p>
                             </Link>
                             <p className="card-text text-dark">{description}</p>
                             <div className="btn btn-primary">${price}</div>
