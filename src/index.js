@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer';
-
+import Cart from './Components/Cart';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 
 import './Components/firebase';
@@ -23,6 +23,7 @@ root.render(
         <Route path="/Category/:categoryId" element={<ItemListContainer/>} />
         <Route path="/Item/:id" element={<ItemDetailContainer/>} />
         <Route path="*" element={<ItemListContainer/>} />
+        <Route path="/Cart" element={<Cart/>} />
         
       </Route>
     </Routes>
