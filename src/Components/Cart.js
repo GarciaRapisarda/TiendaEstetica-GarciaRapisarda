@@ -6,9 +6,9 @@ import { CartContext } from './Context/CartContext'
 
 
 const Cart = () => {
-  const { cart, totalPrice} = useContext(CartContext)
+  const { listaDeProductos, totalPrice} = useContext(CartContext)
 
-  if (cart.length === 0) {
+  if (listaDeProductos.length === 0) {
 
 return (
     <div>
