@@ -19,10 +19,18 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-export const getItemDetail = () => {
-const docRef = doc(db, "Items", "ZH5RQccwFRx7M2kdG0zY");
-return getDoc(docRef);
-}
+/* export const getItemDetail = () => {
+const docRef = doc(db, "Items");
+const docSnap =  getDoc(docRef);
+console.log(docRef)
+
+return getDoc(docSnap);
+} */
+export const getItemById = async (productId) => {
+  
+
+  return (await getDoc(doc(db, "Items", productId))).data();
+};
 
 export const getItemList = () => {
 const colRef = collection(db, "Items");

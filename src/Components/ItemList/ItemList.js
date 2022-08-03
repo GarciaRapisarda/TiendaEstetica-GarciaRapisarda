@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from '../Item';
-import ItemDetailContainer from '../ItemDetailContainer';
 import "./style.css";
 
 const ItemList = ({items}) => {  
@@ -18,7 +17,7 @@ const ItemList = ({items}) => {
     categoryId={categoryId}
     id={id} /> 
     ))} 
-    <ItemDetailContainer />
+   
 
     </div>
   );

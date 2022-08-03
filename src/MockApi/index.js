@@ -1,4 +1,4 @@
-const producto = {
+/* const producto = {
     "id": 17,
     "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
     "price": 39.99,
@@ -18,4 +18,4 @@ const getData = new Promise((resolve, reject) => {
 });
 
 
-export default getData;
+export default getData; */

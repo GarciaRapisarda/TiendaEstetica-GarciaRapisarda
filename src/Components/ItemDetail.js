@@ -2,6 +2,7 @@ import React from "react";
 
 
 const ItemDetail = ({item}) => {
+    console.log(item)
   
   
 
@@ -11,7 +12,7 @@ const ItemDetail = ({item}) => {
         <div className="row">
       
             <div className="card" style={{ "width": "18rem" }}>
-                <img src={item.image} className="card-img-top" alt="..." />
+                <img src={item.imageId} className="card-img-top" alt="..." />
                 <div className="card-body">
                     
                     <h5 className="card-title text-dark">{item.category}</h5>

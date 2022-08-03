@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+/* import React, { useState, useEffect } from 'react'
 import { Outlet, useParams } from 'react-router-dom'
 
 const Categorias = () => {
@@ -49,4 +49,4 @@ const Categorias = () => {
     )
 }
 
-export default Categorias
+export default Categorias */

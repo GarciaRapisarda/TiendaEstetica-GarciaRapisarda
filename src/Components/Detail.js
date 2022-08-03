@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+/* import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemCount from './ItemCount'
 import { CartContext } from './Context/CartContext'
@@ -72,4 +72,4 @@ const Detail = () => {
   )
 }
 
-export default Detail
+export default Detail */
