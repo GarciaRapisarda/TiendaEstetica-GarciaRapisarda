@@ -21,6 +21,7 @@ root.render(
       <Route path="/" element={<App/>}>
         <Route index element={<ItemListContainer/>} />
         <Route path="/Category/:categoryId" element={<ItemListContainer/>} />
+        <Route path="/Category/:categoryId/Item/:id" element={<ItemDetailContainer/>} />
         <Route path="/Item/:id" element={<ItemDetailContainer/>} />
         <Route path="*" element={<ItemListContainer/>} />
         <Route path="/Cart" element={<Cart/>} />
