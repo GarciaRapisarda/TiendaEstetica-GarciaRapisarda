@@ -5,11 +5,12 @@ import { CartContext } from './Context/CartContext'
 
 const CartWidget = () => {
 
-    const { clearCart } = useContext(CartContext)
+    const { clearCart, totalProducts } = useContext(CartContext)
     return (
         <div>
         <Link to="/Cart">
         <button className='btn btn-outline-light justify-content-end'>
+            <span className="top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalProducts() || ""} </span> 
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -25,7 +26,8 @@ const CartWidget = () => {
                 <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
                 <path d="M3 6L21 6"></path>
                 <path d="M16 10a4 4 0 01-8 0"></path>
-            </svg>            
+            </svg> 
+            
         </button>
         </Link>
         <button onClick={() => clearCart ()} className='btn btn-outline-light justify-content-end'>

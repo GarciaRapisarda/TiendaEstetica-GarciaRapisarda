@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import Cart from './Cart'
 
 const EstadoCompra = ({compra}) => {
@@ -11,4 +11,4 @@ const EstadoCompra = ({compra}) => {
   )
 }
 
-export default EstadoCompra
+export default EstadoCompra */

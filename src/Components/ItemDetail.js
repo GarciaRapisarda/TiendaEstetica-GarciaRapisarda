@@ -6,7 +6,7 @@ import { CartContext } from "./Context/CartContext";
 
 const ItemDetail = ({item}) => {
     const [irAlCarrito, setIrAlCarrito] = useState(false);
-    const { listaDeProductos, agregarItem, eliminarItem} = useContext(CartContext)
+    const { listaDeProductos, agregarItem} = useContext(CartContext)
 
     const onAdd = ( quantity) => {
         setIrAlCarrito(true);
@@ -36,6 +36,7 @@ const ItemDetail = ({item}) => {
                     </Link> :
                     <ItemCount stock={5} initial={1} onAdd={onAdd} />
          }
+
                 </div>
             </div>
         </div>

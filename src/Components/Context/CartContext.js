@@ -7,7 +7,7 @@ export const CartContext = createContext({});
 export const CartContextProvider = ({children, defaultValue}) => {
   const [listaDeProductos, setListaDeProductos] = useState([]);
 
-  const agregarItem = (product) => {
+  /* const agregarItem = (product) => {
     const repeatedItemIndex = listaDeProductos.findIndex(
       (item) => item.id === product.id
     );
@@ -22,20 +22,27 @@ export const CartContextProvider = ({children, defaultValue}) => {
     } else {
       setListaDeProductos([product, ...listaDeProductos]);
     }
-  };
+  }; */
 
-  const eliminarItem = (id) => {
-    const indexToRemove = listaDeProductos.findIndex((item) => item.id === id);
-    if (listaDeProductos[indexToRemove].quantity === 1) {
-      setListaDeProductos(listaDeProductos.filter((i) => i.id !== id));
+  const agregarItem = (product, quantity) => {
+    let newCarrito;
+    let prod = listaDeProductos.find(prod => prod.id === product.id);
+    if (prod) { 
+      prod.quantity += quantity;
+      newCarrito = [...listaDeProductos];
     } else {
-      setListaDeProductos(
-        listaDeProductos.map((p) =>
-          p.id === id ? { ...p, quantity: p.quantity - 1 } : p
-        )
-      );
+      prod = {...product, quantity: quantity};
+      newCarrito = [...listaDeProductos, prod];
     }
-  };
+    setListaDeProductos(newCarrito);
+  }
+
+  const eliminarItem = (product) => {
+    const newCarrito = listaDeProductos.filter(prod => prod.id !== product.id);
+    setListaDeProductos(newCarrito);
+  }
+
+    
 
   const clearCart = () => {
     setListaDeProductos([]);
