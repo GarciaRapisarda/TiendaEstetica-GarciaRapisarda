@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer';
 import Cart from './Components/Cart';
 import ItemDetailContainer from './Components/ItemDetailContainer';
-
+import Formulario from './Components/Formulario';
 import './Components/firebase';
 
 
@@ -25,7 +25,7 @@ root.render(
         <Route path="/Item/:id" element={<ItemDetailContainer/>} />
         <Route path="*" element={<ItemListContainer/>} />
         <Route path="/Cart" element={<Cart/>} />
-        
+        <Route path="/Formulario" element={<Formulario/>} />
       </Route>
     </Routes>
 </BrowserRouter>
