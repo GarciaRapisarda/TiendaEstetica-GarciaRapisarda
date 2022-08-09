@@ -18,13 +18,6 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-/* export const getItemDetail = () => {
-const docRef = doc(db, "Items");
-const docSnap =  getDoc(docRef);
-console.log(docRef)
-
-return getDoc(docSnap);
-} */
 export const getItemById = async (productId) => {
   
 
