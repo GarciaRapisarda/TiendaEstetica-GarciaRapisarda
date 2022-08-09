@@ -1,9 +1,11 @@
 import React, {useContext} from 'react';
-import { CartContext } from './Context/CartContext';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../Context/CartContext';
+import "./style.css";
 
 function Formulario() {
 
-    const { setName, setEmail, setPhone, manejarCompra, name, email, phone, setConfirmEmail, confirmEmail, compra } = useContext(CartContext);
+    const { setName, setEmail, setPhone, manejarCompra, name, email, phone, setConfirmEmail, confirmEmail, compra, clearCart } = useContext(CartContext);
 
     console.log(compra);
 
@@ -55,11 +57,13 @@ function Formulario() {
                     <p>
                     ¡Muchas gracias, {compra.buyer.name}! 
                     </p>
-                    <p>El id de tu compra es: {compra.id}</p>
                     <p>Total de tu compra: ${compra.total}</p>
                     </div>
+                    <Link to="/">
+                    <button className='submitButton' onClick={() => {clearCart();setName(""); setEmail(""); setPhone(""); setConfirmEmail("");}}>Volver a comprar</button>
+                    </Link>
                     </>
-                ) : null }
+                ) : null } 
             </div>
         </div>
     )

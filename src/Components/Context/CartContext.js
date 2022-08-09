@@ -5,7 +5,7 @@ export const CartContext = createContext({});
 
 
 
-export const CartContextProvider = ({children, defaultValue}) => {
+export const CartContextProvider = ({children}) => {
   const [listaDeProductos, setListaDeProductos] = useState([]);
 
   const [name, setName] = useState("");
@@ -38,6 +38,7 @@ export const CartContextProvider = ({children, defaultValue}) => {
 
   const clearCart = () => {
     setListaDeProductos([]);
+    setCompra(false);
   };
 
   const isInCart = (id) => {

@@ -17,24 +17,19 @@ const ItemDetail = ({item}) => {
 
   return (
     <div>
-
         <div className="container">
         <div className="row">
-      
-            <div className="card" style={{ "width": "18rem" }}>
+            <div className="card" style={{ maxWidth:300}}>
                 <img src={item.imageId} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    
                     <h5 className="card-title text-dark">{item.category}</h5>
-                    
-                    <h5 className="card-title text-dark">{item.title}</h5>
-                    
+                    <h5 className="card-title text-dark">{item.title}</h5>                    
                     <p className="card-text text-dark">{item.description}</p>
                     <div className="btn btn-primary">${item.price}</div>
                     { irAlCarrito ?
                     <div><Link to="/Cart"><button type="button" className="btn btn-primary">Ir al Carrito</button>
                     </Link> 
-                    <Link to="/"><button type="button" className="btn btn-primary">Volver a la Tienda</button>
+                    <Link to="/"><button type="button" className="btn btn-primary">Seguir Comprando</button>
                     </Link></div>:
                     <ItemCount stock={5} initial={1} onAdd={onAdd} />
          }

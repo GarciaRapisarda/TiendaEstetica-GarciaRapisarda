@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './Components/ItemListContainer';
 import Cart from './Components/Cart';
 import ItemDetailContainer from './Components/ItemDetailContainer';
-import Formulario from './Components/Formulario';
+import Formulario from './Components/Formulario/Formulario'
 import './Components/firebase';
 
 
