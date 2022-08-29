@@ -8,6 +8,7 @@ import {
 	getFirestore,
 } from 'firebase/firestore';
 import './style.css';
+import Swal from 'sweetalert2';
 
 function Formulario() {
 	const { totalPrice, listaDeProductos, clearCart } = useContext(CartContext);
@@ -48,6 +49,11 @@ function Formulario() {
 		addDoc(OrderCollection, buyerData).then(res => {
 			console
 				.log(res.id)
+				Swal.fire({
+					icon: 'success',
+					title: `Compra realizada con éxito el id de tu orden es: ${res.id}`,
+					text: 'Gracias por su compra',
+					})	
 
 				.then(querySnapshot => {
 					if (!querySnapshot.exists) {
@@ -78,6 +84,8 @@ function Formulario() {
 	function onPhoneChange(evt) {
 		setPhone(evt.target.value);
 	}
+
+	console.log(compra);
 
 	return (
 		<div className='formContainer'>
