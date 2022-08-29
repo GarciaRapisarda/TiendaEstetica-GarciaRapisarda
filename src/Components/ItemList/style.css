@@ -1,17 +1,16 @@
-
 .item-list-container {
-    display: flex;
-    width: auto;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 0.625rem;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  @media (max-width: 768px) {
-    .item-list-container {
-      flex-direction: column;
-    }
+	display: flex;
+	width: auto;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 0.625rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (max-width: 768px) {
+	.item-list-container {
+		flex-direction: column;
+	}
 }
